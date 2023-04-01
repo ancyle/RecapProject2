@@ -1,0 +1,104 @@
+<div class="px-lg-5 py-lg-5">
+  <div class="row">
+    <span class="alert alert-dark text-center fw-bold fs-4 col-12">
+      <div class="row-cols-auto"><span>Cars</span></div>
+    </span>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-md-10">
+            <select
+              class="form-select form-select-md mb-3"
+              aria-label=".form-select-lg example"
+              #colorsSelect
+              (change)="setCurrentColor(colorsSelect.value)"
+            >
+              <option selected></option>
+              <option *ngFor="let color of colors">
+                {{ color.colorName }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <button
+              routerLink="/cars/colors/{{ currentColor }}"
+              class="btn btn-dark"
+            >
+              List
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-md-10">
+            <select
+              class="form-select form-select-md mb-3"
+              aria-label=".form-select-lg example"
+              #brandsSelect
+              (change)="setCurrentBrand(brandsSelect.value)"
+            >
+              <option selected></option>
+              <option *ngFor="let brand of brands">
+                {{ brand.brandName }}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button
+              routerLink="/cars/brands/{{ currentBrand }}"
+              class="btn btn-dark"
+            >
+              List
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <input
+        type="text"
+        [(ngModel)]="filterValue"
+        class="form-control text-center col-sm-2 mb-3"
+        id="filterValue"
+        placeholder="Search Car..."
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+      <div
+        *ngFor="let car of cars | carDtoFilterPipe : filterValue"
+        class="bg-white rounded shadow-sm"
+      >
+        <img
+          src="https://bootstrapious.com/i/snippets/sn-gallery/img-2.jpg"
+          alt=""
+          class="img-fluid card-img-top"
+        />
+        <div class="p-4">
+          <h5>
+            <a routerLink="/cars/details/{{ car.carId }}" class="text-dark">{{
+              car.brandName | uppercase
+            }}</a>
+          </h5>
+          <p class="small text-muted mb-0">
+            {{ car.description }}
+          </p>
+          <div
+            class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4"
+          >
+            <p class="small mb-0">
+              <i class="bi bi-image mr-2"></i
+              ><span class="font-weight-bold"> {{ car.modelYear }}</span>
+            </p>
+            <div class="badge bg-primary px-3 rounded-pill font-weight-normal">
+              {{ car.dailyPrice | currency }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

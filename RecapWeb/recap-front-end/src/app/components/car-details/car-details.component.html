@@ -1,0 +1,37 @@
+<div class="row px-lg-5 py-lg-5">
+  <div class="col-md-3">
+    <ul class="list-group mx-lg-3">
+      <span class="alert alert-dark fw-bold fs-5 text-center">Car Details</span>
+      <li class="list-group-item"># {{ carDetailDto.carId }}</li>
+      <li class="list-group-item">
+        <span class="fw-bold"> Brand Name: </span>{{ carDetailDto.brandName }}
+      </li>
+      <li class="list-group-item">
+        <span class="fw-bold">Color Name: </span> {{ carDetailDto.colorName }}
+      </li>
+      <li class="list-group-item">
+        <span class="fw-bold">Model Year: </span> {{ carDetailDto.modelYear }}
+      </li>
+      <li class="list-group-item">
+        <span class="fw-bold">Description: </span>{{ carDetailDto.description }}
+      </li>
+      <li class="list-group-item">
+        <span class="fw-bold">Daily Price: </span>
+        {{ carDetailDto.dailyPrice | currency }}
+      </li>
+      <li class="list-group-item justify-content-center d-flex">
+        <button class="btn btn-success">Rent</button>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <span class="alert alert-dark fw-bold fs-5 text-center">Car Images</span>
+    </div>
+    <img
+      *ngFor="let carImage of carImages"
+      class="user-select-none select-is-none img-thumbnail"
+      [src]="getImagePath(carImage.imagePath)"
+    />
+  </div>
+</div>

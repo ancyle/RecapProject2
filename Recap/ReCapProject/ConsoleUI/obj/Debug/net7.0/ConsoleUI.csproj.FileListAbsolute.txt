@@ -1,0 +1,15 @@
+P:\Recap\ReCapProject\ConsoleUI\bin\Debug\net7.0\ConsoleUI.exe
+P:\Recap\ReCapProject\ConsoleUI\bin\Debug\net7.0\ConsoleUI.deps.json
+P:\Recap\ReCapProject\ConsoleUI\bin\Debug\net7.0\ConsoleUI.runtimeconfig.json
+P:\Recap\ReCapProject\ConsoleUI\bin\Debug\net7.0\ConsoleUI.dll
+P:\Recap\ReCapProject\ConsoleUI\bin\Debug\net7.0\ConsoleUI.pdb
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.csproj.AssemblyReference.cache
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.AssemblyInfoInputs.cache
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.AssemblyInfo.cs
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.csproj.CoreCompileInputs.cache
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.dll
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\refint\ConsoleUI.dll
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.pdb
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ConsoleUI.genruntimeconfig.cache
+P:\Recap\ReCapProject\ConsoleUI\obj\Debug\net7.0\ref\ConsoleUI.dll

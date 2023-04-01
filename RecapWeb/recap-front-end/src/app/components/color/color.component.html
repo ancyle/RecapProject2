@@ -1,0 +1,21 @@
+<ul class="list-group pt-lg-5">
+  <li class="list-group-item list-group-item-dark fw-bold text-center">
+    Colors
+  </li>
+  <div class="mb-3">
+    <input
+      type="text"
+      [(ngModel)]="filterValue"
+      class="form-control text-center"
+      id="filterValue"
+      placeholder="Color Name..."
+    />
+  </div>
+  <li
+    *ngFor="let color of colors | colorFilterPipe : filterValue"
+    class="list-group-item list-group-item-light text-center"
+    routerLink="/cars/colors/{{ color.colorName }}"
+  >
+    {{ color.colorName }}
+  </li>
+</ul>
